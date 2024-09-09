@@ -40,7 +40,7 @@ sealed class UserListScreenState(val appBarTitle: String = "") {
             UserListErrorScreen(
                 UserListErrorScreenUiState(
                     message, uiAction::onFetchErrorRetry
- w               )
+                )
             )
         }
     }
