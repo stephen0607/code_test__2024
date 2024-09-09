@@ -1,0 +1,76 @@
+package com.example.code_test.model
+
+import com.google.gson.annotations.SerializedName
+
+data class UserInfo(
+    val login: String,
+    val id: Int,
+    @SerializedName("node_id") val nodeId: String,
+    @SerializedName("avatar_url") val avatarUrl: String,
+    @SerializedName("gravatar_id") val gravatarId: String,
+    val url: String,
+    @SerializedName("html_url") val htmlUrl: String,
+    @SerializedName("followers_url") val followersUrl: String,
+    @SerializedName("following_url") val followingUrl: String,
+    @SerializedName("gists_url") val gistsUrl: String,
+    @SerializedName("starred_url") val starredUrl: String,
+    @SerializedName("subscriptions_url") val subscriptionsUrl: String,
+    @SerializedName("organizations_url") val organizationsUrl: String,
+    @SerializedName("repos_url") val reposUrl: String,
+    @SerializedName("events_url") val eventsUrl: String,
+    @SerializedName("received_events_url") val receivedEventsUrl: String,
+    val type: String,
+    @SerializedName("site_admin") val siteAdmin: Boolean,
+    val name: String?,
+    val company: String?,
+    val blog: String?,
+    val location: String?,
+    val email: String?,
+    val hireable: Boolean?,
+    val bio: String?,
+    @SerializedName("twitter_username") val twitterUsername: String?,
+    @SerializedName("public_repos") val publicRepos: Int?,
+    @SerializedName("public_gists") val publicGists: Int?,
+    val followers: Int?,
+    val following: Int?,
+    @SerializedName("created_at") val createdAt: String?,
+    @SerializedName("updated_at") val updatedAt: String?
+)
+
+
+fun getDummyUserInfo(): UserInfo {
+    return UserInfo(
+        login = "octocat",
+        id = 1,
+        nodeId = "MDQ6VXNlcjE=",
+        avatarUrl = "https://github.com/images/error/octocat_happy.gif",
+        gravatarId = "",
+        url = "https://api.github.com/users/octocat",
+        htmlUrl = "https://github.com/octocat",
+        followersUrl = "https://api.github.com/users/octocat/followers",
+        followingUrl = "https://api.github.com/users/octocat/following{/other_user}",
+        gistsUrl = "https://api.github.com/users/octocat/gists{/gist_id}",
+        starredUrl = "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+        subscriptionsUrl = "https://api.github.com/users/octocat/subscriptions",
+        organizationsUrl = "https://api.github.com/users/octocat/orgs",
+        reposUrl = "https://api.github.com/users/octocat/repos",
+        eventsUrl = "https://api.github.com/users/octocat/events{/privacy}",
+        receivedEventsUrl = "https://api.github.com/users/octocat/received_events",
+        type = "User",
+        siteAdmin = false,
+        name = "Mona Lisa Octocat",
+        company = "GitHub",
+        blog = "https://github.com/blog",
+        location = "San Francisco",
+        email = "octocat@github.com",
+        hireable = false,
+        bio = "There once was...",
+        twitterUsername = "monatheoctocat",
+        publicRepos = 2,
+        publicGists = 1,
+        followers = 20,
+        following = 0,
+        createdAt = "2008-01-14T04:33:35Z",
+        updatedAt = "2008-01-14T04:33:35Z"
+    )
+}
